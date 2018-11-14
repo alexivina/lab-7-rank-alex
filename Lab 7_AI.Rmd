@@ -40,3 +40,20 @@ mwu_kermit
 
 ```
 
+COLLABORATOR:
+
+Now I want to compare the pre-talk and post talk ranks - 
+"IS there a significant difference in Kermit ranks for pre-talk and post-talk scores (ignoring all other variables)?"
+
+H0: No.
+
+```{r}
+
+wsr_kermit <- wilcox.test(kermit$Score.pre, kermit$Score.post, paired = TRUE)
+wsr_kermit
+
+# There is no significant difference in rankings before and after his talk (Summary...)
+
+```
+
+
