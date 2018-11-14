@@ -10,3 +10,17 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 Hi this is Alex and I created this awesome repo for you to admire.
+
+```{r}
+
+library(tidyverse)
+kermit <- read_csv("kermit.csv")
+
+kermit_hist <- ggplot(kermit, aes(x = Score.pre)) +
+  geom_histogram() +
+  facet_wrap(~ Gender)
+
+kermit_hist
+
+```
+
